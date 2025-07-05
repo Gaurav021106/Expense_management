@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expense Management</title>
+  <link rel="stylesheet" href="expense.css" />
+</head>
+<body>
+  <div class="header">
+    <h1>Expense Management</h1>
+  </div>
+
+  <div class="container">
+    <h2 class="heading">Set Budget</h2>
+    <form id="set-budget-form">
+      <label for="budget">Set Budget:</label>
+      <input type="number" id="budget" placeholder="Enter your budget" required />
+      <button type="submit" id="set-budget-btn">Set</button>
+    </form>
+
+    <div class="budget_display">
+      <div class="current_budget">
+        <h3>Current Budget:</h3>
+        <div id="display-budget">₹0</div>
+      </div>
+      <div class="current_budget">
+        <h3>Total Expense:</h3>
+        <div id="display-expense">₹0</div>
+      </div>
+      <div class="current_budget">
+        <h3>Remaining:</h3>
+        <div id="display-remaining">₹0</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2 class="heading">Add Expense</h2>
+    <form id="add-expense-form">
+      <label for="expense-name">Expense Name:</label>
+      <input type="text" id="expense-name" placeholder="Enter expense name" required />
+
+      <label for="expense-date">Date:</label>
+      <input type="date" id="expense-date" required />
+
+      <label for="expense-amount">Amount:</label>
+      <input type="number" id="expense-amount" placeholder="Enter amount" required />
+
+      <button type="submit" id="add-expense-btn">Add</button>
+    </form>
+  </div>
+
+  <div class="container">
+    <h2 class="heading">Expense List</h2>
+    <table class="Expense_List">
+      <thead>
+        <tr>
+          <th>Expense Name</th>
+          <th>Date</th>
+          <th>Amount (₹)</th>
+        </tr>
+      </thead>
+      <tbody id="expense-list">
+        <!-- Dynamic list -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="expense.js"></script>
+</body>
+</html>
